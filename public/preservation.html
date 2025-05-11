@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' http://localhost:8000;">
+  <title>CyberSafe Bharat - Evidence Preservation Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/681f37f9439fb31912e9d1b6/1iqsv5bq1';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+
+  <!-- Navigation (Same as previous) -->
+   <!-- Enhanced Navigation -->
+<nav class="bg-indigo-800 text-white shadow-lg fixed w-full z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo Section -->
+        <a href="/" class="flex items-center space-x-2">
+          <span class="material-icons text-2xl text-indigo-300">security</span>
+          <span class="text-xl font-bold">CyberSafe Bharat</span>
+        </a>
+  
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <div class="flex space-x-6 text-sm font-medium">
+            <a href="/cyberstalking/homepage" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Homepage</a>
+            <a href="/cyberstalking/report" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Report Crimes</a>
+            <a href="/cyberstalking/preservation" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Preservation</a>
+            <a href="#education" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Education</a>
+          </div>
+          <div class="ml-6 border-l border-indigo-600 h-6"></div>
+          <div class="flex items-center space-x-4">
+            <a href="#emergency" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md flex items-center transition-all">
+              <span class="material-icons mr-2">emergency</span>
+              Emergency
+            </a>
+            <select class="bg-transparent text-sm focus:outline-none">
+              <option>English</option>
+              <option>हिंदी</option>
+            </select>
+          </div>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <button @click="isOpen = !isOpen" class="md:hidden p-2 rounded-md hover:bg-indigo-700 focus:outline-none"
+                aria-label="Toggle menu"
+                aria-expanded="false">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Mobile Navigation -->
+      <div class="md:hidden" x-show="isOpen" @click.away="isOpen = false" style="display: none;">
+        <div class="pt-2 pb-3 space-y-1">
+          <div class="flex space-x-6 text-sm font-medium">
+            <a href="/cyberstalking/homepage" class="block px-3 py-2 hover:bg-indigo-700 rounded-md">Homepage</a>
+            <a href="/cyberstalking/report" class="block px-3 py-2 hover:bg-indigo-700 rounded-md">Report Crimes</a>
+            <a href="/cyberstalking/preservation" class="block px-3 py-2 hover:bg-indigo-700 rounded-md">Preservation</a>
+            <a href="#education" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Education</a>
+          <div class="border-t border-indigo-600 mt-2 pt-2">
+            <a href="#emergency" class="block px-3 py-2 bg-red-500 hover:bg-red-600 rounded-md flex items-center">
+              <span class="material-icons mr-2">emergency</span>
+              Emergency Help
+            </a>
+          </div>
+          <div class="px-3 pt-2">
+            <select class="w-full bg-indigo-700 text-sm p-2 rounded-md">
+              <option>English</option>
+              <option>हिंदी</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+  // Mobile menu toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-label="Toggle menu"]');
+    const mobileMenu = document.querySelector('.md\\:hidden > div');
+    
+    mobileMenuButton.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    });
+  
+    // Close menu on click outside
+    document.addEventListener('click', function(event) {
+      if (!mobileMenu.contains(event.target)) {
+        mobileMenu.style.display = 'none';
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  
+    // Smooth scroll for anchor links only
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    
+    // Only handle anchor links (starting with #)
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        mobileMenu.style.display = 'none';
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+    }
+    // Let browser handle regular page navigation
+  });
+});
+  });
+  </script>
+
+<!-- Enhanced Hero Section -->
+<section class="relative bg-gradient-to-br from-indigo-900 to-purple-900 text-white overflow-hidden">
+    <!-- Animated background -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      <div class="animate-float-pattern pattern-dots-lg text-white/5 pattern-bg-transparent">
+        <div class="pattern-size-6"></div>
+      </div>
+    </div>
+  
+    <div class="max-w-7xl mx-auto px-4 py-24 md:py-32 text-center relative">
+      <!-- Icon animation -->
+      <div class="animate-float-icon mb-8">
+        <span class="material-icons text-6xl text-indigo-300">fingerprint</span>
+      </div>
+  
+      <!-- Main heading with legal reference -->
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        <span class="bg-gradient-to-r from-blue-300 to-purple-200 bg-clip-text text-transparent">
+          Digital Evidence Protection
+        </span>
+      </h1>
+      <p class="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto leading-relaxed">
+        Securing Digital Footprints Under 
+        <span class="border-b-2 border-indigo-400">IT Act 2000 & Section 65B</span> 
+        of Indian Evidence Act
+      </p>
+  
+      <!-- Quick stats grid -->
+      <div class="grid md:grid-cols-4 gap-4 mb-12 max-w-5xl mx-auto">
+        <div class="bg-white/5 p-4 rounded-xl backdrop-blur-sm">
+          <div class="text-2xl font-bold mb-1">72hr</div>
+          <div class="text-xs">Critical Preservation Window</div>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl backdrop-blur-sm">
+          <div class="text-2xl font-bold mb-1">90%</div>
+          <div class="text-xs">Cases Rejected Due to Poor Evidence</div>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl backdrop-blur-sm">
+          <div class="text-2xl font-bold mb-1">65B</div>
+          <div class="text-xs">Evidence Act Compliance</div>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl backdrop-blur-sm">
+          <div class="text-2xl font-bold mb-1">24/7</div>
+          <div class="text-xs">Forensic Support</div>
+        </div>
+      </div>
+  
+      <!-- CTA and Trust badges -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+        <div class="flex space-x-4">
+          <button class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full flex items-center transition-all">
+            <span class="material-icons mr-2">emergency</span>
+            Immediate Assistance
+          </button>
+          <button class="px-8 py-3 border border-indigo-400 hover:bg-indigo-500/10 rounded-full flex items-center transition-all">
+            <span class="material-icons mr-2">download</span>
+            Legal Guide
+          </button>
+        </div>
+        
+        <div class="flex items-center space-x-3 opacity-80">
+          <span class="text-sm">Recognized by:</span>
+          <img src="https://media.assettype.com/psuwatch/import/wp-content/uploads/2022/02/504166487_5ff9814d88b33.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" class="h-8" alt="MeitY">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnCCBlb_-4yMkZnC3NPiMR_Y-XTWAmW-8Z9A&s" class="h-8" alt="NCRB">
+        </div>
+      </div>
+  
+      <!-- Scroll indicator -->
+      <div class="mt-16 animate-bounce">
+        <span class="material-icons text-4xl">expand_more</span>
+      </div>
+    </div>
+  
+    <!-- Law reference badge -->
+    <div class="absolute bottom-4 right-4 bg-white/5 px-4 py-2 rounded-full text-sm backdrop-blur-sm">
+      IT Act 2000 Compliant Procedures
+    </div>
+  </section>
+  
+  <style>
+  @keyframes float-pattern {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 20% 20%; }
+  }
+  
+  @keyframes float-icon {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float-pattern {
+    animation: float-pattern 120s linear infinite;
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .animate-float-icon {
+    animation: float-icon 6s ease-in-out infinite;
+  }
+  
+  .pattern-dots-lg {
+    background-image: radial-gradient(currentColor 2px, transparent 2px);
+  }
+  </style>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+<!-- Enhanced Quick Action Cards -->
+<div class="grid md:grid-cols-3 gap-6 mb-12">
+    <!-- Immediate Response Card -->
+    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
+      <div class="flex items-center mb-4 border-b pb-4">
+        <div class="bg-green-100 p-3 rounded-full mr-3">
+          <span class="material-icons text-green-600">flash_on</span>
+        </div>
+        <h3 class="text-lg font-semibold">Critical First Response</h3>
+      </div>
+      <div class="space-y-4">
+        <div class="flex items-start">
+          <span class="material-icons text-sm text-green-600 mr-2">check_circle</span>
+          <div>
+            <p class="font-medium">Legal Readiness</p>
+            <p class="text-sm text-gray-600">IT Act Section 65B compliance checklist</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <span class="material-icons text-sm text-blue-600 mr-2">devices</span>
+          <div>
+            <p class="font-medium">Device Protection</p>
+            <p class="text-sm text-gray-600">Preserve original storage media</p>
+          </div>
+        </div>
+        <div class="bg-blue-50 p-3 rounded-lg">
+          <div class="flex items-center text-sm text-blue-600">
+            <span class="material-icons mr-2">schedule</span>
+            <span>72hr Critical Window</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Common Pitfalls Card -->
+    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
+      <div class="flex items-center mb-4 border-b pb-4">
+        <div class="bg-red-100 p-3 rounded-full mr-3">
+          <span class="material-icons text-red-600">dangerous</span>
+        </div>
+        <h3 class="text-lg font-semibold">Avoid Legal Pitfalls</h3>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-red-50 p-3 rounded-lg">
+          <div class="flex items-center text-red-600 text-sm">
+            <span class="material-icons mr-2">block</span>
+            <span>65% Cases Rejected Due To</span>
+          </div>
+        </div>
+        <ul class="list-disc pl-5 space-y-3 text-sm">
+          <li class="text-red-600">Improper chain of custody</li>
+          <li class="text-red-600">Metadata alteration</li>
+          <li class="text-red-600">Public evidence sharing</li>
+        </ul>
+        <div class="text-xs text-gray-500 mt-2">* As per NCRB 2022 Report</div>
+      </div>
+    </div>
+  
+    <!-- Digital Toolkit Card -->
+    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
+      <div class="flex items-center mb-4 border-b pb-4">
+        <div class="bg-purple-100 p-3 rounded-full mr-3">
+          <span class="material-icons text-purple-600">download_for_offline</span>
+        </div>
+        <h3 class="text-lg font-semibold">Forensic Toolkit</h3>
+      </div>
+      <div class="space-y-4">
+        <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+          <span class="material-icons text-indigo-600 mr-3">article</span>
+          <div>
+            <p class="font-medium">FIR Template</p>
+            <p class="text-sm text-gray-600">Bilingual (English/Hindi)</p>
+          </div>
+        </a>
+        <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+          <span class="material-icons text-indigo-600 mr-3">screen_share</span>
+          <div>
+            <p class="font-medium">Screen Recorder</p>
+            <p class="text-sm text-gray-600">Metadata-preserving tool</p>
+          </div>
+        </a>
+        <div class="bg-purple-50 p-3 rounded-lg">
+          <div class="flex items-center text-sm text-purple-600">
+            <span class="material-icons mr-2">verified</span>
+            <span>MeitY Approved Tools</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Interactive Progress Section -->
+  <div class="grid md:grid-cols-3 gap-6 mb-12">
+    <div class="md:col-span-2 bg-white p-6 rounded-xl shadow-lg">
+      <h4 class="text-lg font-semibold mb-4">Evidence Preservation Checklist</h4>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-3">
+            <span>Original device isolated</span>
+          </div>
+          <span class="material-icons text-green-600">lock</span>
+        </div>
+        <!-- More checklist items -->
+      </div>
+      <div class="mt-4 bg-gray-100 p-3 rounded-lg">
+        <div class="flex items-center justify-between text-sm">
+          <span>Progress: 2/5 Completed</span>
+          <span class="text-indigo-600">Save Progress</span>
+        </div>
+        <div class="w-full bg-gray-300 h-2 rounded-full mt-2">
+          <div class="bg-green-500 h-2 rounded-full w-2/5"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="bg-indigo-50 p-6 rounded-xl">
+      <h4 class="text-lg font-semibold mb-4">Legal Advisory</h4>
+      <div class="flex items-start mb-3">
+        <span class="material-icons text-red-600 mr-2">gavel</span>
+        <p class="text-sm">Evidence must be submitted within 72 hours for maximum validity</p>
+      </div>
+      <button class="w-full flex items-center justify-center bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700">
+        <span class="material-icons mr-2">connect_without_contact</span>
+        Connect with Cyber Lawyer
+      </button>
+    </div>
+  </div>
+
+<!-- Enhanced Step-by-Step Guide -->
+<div class="bg-white rounded-2xl shadow-xl p-8 mb-12">
+    <div class="flex items-center mb-8">
+      <span class="material-icons text-3xl text-indigo-600 mr-3">alt_route</span>
+      <h2 class="text-2xl font-semibold">IT Act Compliant Evidence Preservation</h2>
+    </div>
+  
+    <!-- Interactive Progress -->
+    <div class="mb-8 bg-gray-50 p-4 rounded-lg">
+      <div class="flex items-center justify-between text-sm">
+        <div>Completion Progress: <span class="font-medium">2/5 Steps</span></div>
+        <button class="text-indigo-600 hover:underline flex items-center">
+          <span class="material-icons mr-1">save</span>
+          Save Progress
+        </button>
+      </div>
+      <div class="w-full bg-gray-200 h-2 rounded-full mt-2">
+        <div class="bg-green-500 h-2 rounded-full w-2/5 transition-all"></div>
+      </div>
+    </div>
+  
+    <!-- Step 1 - Expanded -->
+    <div class="group border-l-4 border-indigo-600 pl-6 mb-8">
+      <div class="flex items-start cursor-pointer" onclick="toggleStep(1)">
+        <div class="w-10 flex-shrink-0">
+          <div class="h-10 w-10 bg-indigo-600 text-white rounded-full flex items-center justify-center">
+            1
+          </div>
+        </div>
+        <div class="ml-4 flex-1">
+          <h3 class="text-xl font-semibold mb-2">Initial Documentation Protocol</h3>
+          <div class="text-sm text-gray-600">
+            <p>Critical first steps per Cyber Crime Cell guidelines</p>
+            <div class="mt-3 bg-blue-50 p-4 rounded-lg">
+              <div class="flex items-start">
+                <span class="material-icons text-blue-600 mr-2">gavel</span>
+                <div>
+                  <strong>Legal Mandate:</strong> Section 65B Evidence Act requires:
+                  <ul class="list-disc pl-5 mt-1">
+                    <li>Original device preservation</li>
+                    <li>Certificate from party submitting evidence</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="material-icons ml-4 text-gray-400 group-hover:text-indigo-600">expand_more</span>
+      </div>
+  
+      <!-- Step Content -->
+      <div class="ml-14 mt-4 space-y-4" id="step1-content">
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Proper Documentation -->
+          <div class="bg-green-50 p-6 rounded-xl">
+            <div class="flex items-center mb-3">
+              <span class="material-icons text-green-600 mr-2">check_circle</span>
+              <h4 class="font-medium">Do's</h4>
+            </div>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Photograph device with timestamp newspaper</li>
+              <li>Use screen recording with system clock visible</li>
+              <li>Create SHA-256 hash of digital files</li>
+            </ul>
+          </div>
+  
+          <!-- Common Mistakes -->
+          <div class="bg-red-50 p-6 rounded-xl">
+            <div class="flex items-center mb-3">
+              <span class="material-icons text-red-600 mr-2">dangerous</span>
+              <h4 class="font-medium">Don'ts</h4>
+            </div>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Don't transfer files via WhatsApp/email</li>
+              <li>Avoid factory resetting devices</li>
+              <li>Never store only in cloud platforms</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Evidence Log Template -->
+        <div class="bg-white border p-6 rounded-xl">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center">
+              <span class="material-icons text-indigo-600 mr-2">assignment</span>
+              <h4 class="font-medium">Digital Evidence Log Template</h4>
+            </div>
+            <button class="text-indigo-600 hover:underline flex items-center">
+              Download <span class="material-icons ml-1">download</span>
+            </button>
+          </div>
+          <div class="text-sm text-gray-600">
+            Includes fields for:
+            <ul class="list-disc pl-5 mt-1">
+              <li>Device IMEI/MAC addresses</li>
+              <li>Hash values of digital files</li>
+              <li>Witness signatures</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Step 2 - Forensic Preservation -->
+    <div class="group border-l-4 border-indigo-600 pl-6 mb-8">
+      <div class="flex items-start cursor-pointer" onclick="toggleStep(2)">
+        <div class="w-10 flex-shrink-0">
+          <div class="h-10 w-10 bg-indigo-600 text-white rounded-full flex items-center justify-center">
+            2
+          </div>
+        </div>
+        <div class="ml-4 flex-1">
+          <h3 class="text-xl font-semibold mb-2">Forensic Acquisition Process</h3>
+          <div class="text-sm text-gray-600">
+            <p>MeitY approved forensic preservation methods</p>
+            <div class="mt-3 bg-purple-50 p-4 rounded-lg">
+              <div class="flex items-start">
+                <span class="material-icons text-purple-600 mr-2">verified_user</span>
+                <div>
+                  <strong>Certified Tools:</strong> C-DAC Forensic Suite recommended for:
+                  <ul class="list-disc pl-5 mt-1">
+                    <li>Mobile device imaging</li>
+                    <li>Metadata preservation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="material-icons ml-4 text-gray-400 group-hover:text-indigo-600">expand_more</span>
+      </div>
+  
+      <!-- Step Content -->
+      <div class="ml-14 mt-4 space-y-4" id="step2-content">
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Tool Guide -->
+          <div class="bg-white p-6 rounded-xl border">
+            <div class="flex items-center mb-3">
+              <span class="material-icons text-blue-600 mr-2">handyman</span>
+              <h4 class="font-medium">Forensic Toolkit</h4>
+            </div>
+            <div class="space-y-3">
+              <a href="#" class="flex items-center hover:bg-gray-50 p-2 rounded">
+                <span class="material-icons mr-2">android</span>
+                Mobile Verification App
+              </a>
+              <a href="#" class="flex items-center hover:bg-gray-50 p-2 rounded">
+                <span class="material-icons mr-2">fingerprint</span>
+                Hash Generator Tool
+              </a>
+            </div>
+          </div>
+  
+          <!-- Video Guide -->
+<div class="bg-black/5 p-6 rounded-xl">
+    <div class="aspect-video bg-gray-200 rounded-lg mb-3 overflow-hidden">
+      <iframe
+        class="w-full h-full rounded-lg"
+        src="https://www.youtube.com/watch?v=GZMUYqjAS6k"
+        title="Forensic Imaging Tutorial"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="flex items-center justify-between">
+      <span class="text-sm">Forensic Imaging Tutorial</span>
+      <button class="text-indigo-600 flex items-center">
+        Play <span class="material-icons ml-1">play_circle</span>
+      </button>
+    </div>
+  </div>
+  
+        </div>
+  
+        <!-- Legal Checklist -->
+        <div class="bg-white p-6 rounded-xl border">
+          <div class="flex items-center mb-3">
+            <span class="material-icons text-green-600 mr-2">checklist</span>
+            <h4 class="font-medium">Section 65B Compliance Checklist</h4>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <input type="checkbox" id="affidavit_check" name="affidavit_check" class="mr-2">
+              <label for="affidavit_check">Affidavit from device owner</label>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox" id="operation_check" name="operation_check" class="mr-2">
+              <label for="operation_check">Continuous operation proof</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Step Navigation -->
+    <div class="flex justify-between mt-8">
+      <button class="px-6 py-2 text-gray-600 hover:text-indigo-600 flex items-center">
+        <span class="material-icons mr-1">arrow_back</span>
+        Previous Step
+      </button>
+      <button class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 flex items-center">
+        Next Step
+        <span class="material-icons ml-1">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+  
+  <script>
+  function toggleStep(stepNumber) {
+    const content = document.getElementById(`step${stepNumber}-content`);
+    content.classList.toggle('hidden');
+  }
+  
+  // Initialize step persistence
+  document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem(checkbox.nextElementSibling.textContent, checkbox.checked);
+    });
+  });
+  </script>
+  
+  <style>
+  .group:hover .material-icons {
+    color: #4f46e5;
+  }
+  
+  #step1-content, #step2-content {
+    transition: all 0.3s ease;
+  }
+  
+  .border-l-4 {
+    border-left-width: 4px;
+  }
+  </style>
+
+<!-- Enhanced Digital Evidence Types Section -->
+<div class="bg-indigo-50 p-8 rounded-xl mb-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center mb-6">
+        <span class="material-icons text-3xl text-indigo-600 mr-3">fingerprint</span>
+        <h2 class="text-2xl font-semibold">Court-Valid Digital Evidence Types</h2>
+      </div>
+      <p class="text-gray-600 mb-8 max-w-3xl">
+        Recognized under IT Act 2000 & Section 65B of Evidence Act - India
+      </p>
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Communication Evidence -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-100 p-2 rounded-lg mr-3">
+              <span class="material-icons text-blue-600">chat</span>
+            </div>
+            <h3 class="font-semibold">Digital Communications</h3>
+          </div>
+          <ul class="list-disc pl-5 space-y-2 text-sm mb-4">
+            <li>WhatsApp/Telegram Chats</li>
+            <li>Social Media Messages</li>
+            <li>Email Correspondence</li>
+          </ul>
+          <div class="bg-blue-50 p-3 rounded-lg">
+            <div class="flex items-center text-blue-600 text-xs">
+              <span class="material-icons mr-1">gavel</span>
+              IT Act Section 67B
+            </div>
+          </div>
+        </div>
+  
+        <!-- Multimedia Evidence -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <div class="bg-purple-100 p-2 rounded-lg mr-3">
+              <span class="material-icons text-purple-600">movie</span>
+            </div>
+            <h3 class="font-semibold">Multimedia Files</h3>
+          </div>
+          <ul class="list-disc pl-5 space-y-2 text-sm mb-4">
+            <li>Edited/Original Images</li>
+            <li>Video Recordings</li>
+            <li>Audio Conversations</li>
+          </ul>
+          <div class="bg-purple-50 p-3 rounded-lg">
+            <div class="flex items-center text-purple-600 text-xs">
+              <span class="material-icons mr-1">warning</span>
+              Metadata Preservation Critical
+            </div>
+          </div>
+        </div>
+  
+        <!-- Financial Evidence -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-100 p-2 rounded-lg mr-3">
+              <span class="material-icons text-green-600">payments</span>
+            </div>
+            <h3 class="font-semibold">Financial Trails</h3>
+          </div>
+          <ul class="list-disc pl-5 space-y-2 text-sm mb-4">
+            <li>UPI Transaction Logs</li>
+            <li>Bank Statement PDFs</li>
+            <li>Cryptocurrency Wallets</li>
+          </ul>
+          <div class="bg-green-50 p-3 rounded-lg">
+            <div class="flex items-center text-green-600 text-xs">
+              <span class="material-icons mr-1">savings</span>
+              RBI Guidelines Compliance
+            </div>
+          </div>
+        </div>
+  
+        <!-- Device Evidence -->
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <div class="bg-orange-100 p-2 rounded-lg mr-3">
+              <span class="material-icons text-orange-600">phone_iphone</span>
+            </div>
+            <h3 class="font-semibold">Device Forensics</h3>
+          </div>
+          <ul class="list-disc pl-5 space-y-2 text-sm mb-4">
+            <li>Call Detail Records</li>
+            <li>GPS Location History</li>
+            <li>App Usage Logs</li>
+          </ul>
+          <div class="bg-orange-50 p-3 rounded-lg">
+            <div class="flex items-center text-orange-600 text-xs">
+              <span class="material-icons mr-1">fingerprint</span>
+              IMEI/Serial Number Required
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Specialized Evidence Section -->
+      <div class="grid md:grid-cols-2 gap-6 mt-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <span class="material-icons text-red-600 mr-3">cloud</span>
+            <h3 class="font-semibold">Cloud & Social Media</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+              <div>
+                <div class="font-medium">Social Media Posts</div>
+                <div class="text-xs text-gray-600">Include sharing metrics</div>
+              </div>
+              <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">Section 79</span>
+            </div>
+            <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+              <div>
+                <div class="font-medium">Deleted Content</div>
+                <div class="text-xs text-gray-600">Requires forensic recovery</div>
+              </div>
+              <button class="text-indigo-600 text-xs flex items-center">
+                Guide <span class="material-icons ml-1">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <span class="material-icons text-blue-600 mr-3">code</span>
+            <h3 class="font-semibold">Technical Evidence</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2 text-green-600">check_circle</span>
+              Server Logs (AWS/Azure)
+            </div>
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2 text-green-600">check_circle</span>
+              Database Snapshots
+            </div>
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2 text-green-600">check_circle</span>
+              Network Packet Captures
+            </div>
+            <div class="mt-3 bg-blue-50 p-3 rounded-lg">
+              <div class="flex items-center text-blue-600 text-xs">
+                <span class="material-icons mr-1">verified</span>
+                Requires Cert-In Approved Tools
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Legal Compliance Footer -->
+      <div class="mt-8 bg-indigo-100 p-6 rounded-xl">
+        <div class="flex items-start">
+          <span class="material-icons text-indigo-600 mr-3">gavel</span>
+          <div>
+            <h3 class="font-semibold mb-2">Legal Admissibility Checklist</h3>
+            <ul class="list-disc pl-5 space-y-2 text-sm">
+              <li>Section 65B Certificate Attached</li>
+              <li>Chain of Custody Documented</li>
+              <li>Hash Verification Completed</li>
+            </ul>
+            <button class="mt-4 text-indigo-600 hover:underline flex items-center">
+              <span class="material-icons mr-2">download</span>
+              Download Compliance Checklist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Enhanced Legal Compliance Suite -->
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+    <!-- Interactive Checklist -->
+    <div class="bg-white rounded-2xl shadow-xl p-6">
+      <div class="flex items-center mb-6">
+        <span class="material-icons text-3xl text-indigo-600 mr-3">checklist</span>
+        <h2 class="text-2xl font-semibold">Section 65B Compliance Checklist</h2>
+      </div>
+      
+      <!-- Progress Tracker -->
+      <div class="bg-gray-50 p-4 rounded-lg mb-6">
+        <div class="flex items-center justify-between text-sm mb-2">
+          <span>Completion Progress</span>
+          <span>3/8 Completed</span>
+        </div>
+        <div class="w-full bg-gray-200 h-2 rounded-full">
+          <div class="bg-green-500 h-2 rounded-full w-3/8"></div>
+        </div>
+      </div>
+  
+      <!-- Checklist Sections -->
+      <div class="space-y-4">
+        <!-- Device Preservation -->
+        <div class="border-l-4 border-indigo-600 pl-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium mb-2">Device Preservation</h3>
+            <span class="text-sm text-gray-500">2/3</span>
+          </div>
+          <div class="space-y-2 ml-4">
+            <label class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+              <input type="checkbox" id="storage_check" name="storage_check" class="mr-3 w-5 h-5">
+              <span>Original storage media preserved</span>
+            </label>
+            <label class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+              <input type="checkbox" id="write_protection" name="write_protection" class="mr-3 w-5 h-5">
+              <span>Write-protection enabled</span>
+            </label>
+            <label class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+              <input type="checkbox" id="hash_value" name="hash_value" class="mr-3 w-5 h-5">
+              <span>Hash value recorded</span>
+            </label>
+          </div>
+        </div>
+  
+        <!-- Documentation -->
+        <div class="border-l-4 border-indigo-600 pl-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium mb-2">Legal Documentation</h3>
+            <span class="text-sm text-gray-500">1/4</span>
+          </div>
+          <div class="space-y-2 ml-4">
+            <label class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+              <input type="checkbox" id="section_65b" name="section_65b" class="mr-3 w-5 h-5">
+              <span>Section 65B affidavit prepared</span>
+            </label>
+            <label class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+              <input type="checkbox" id="chain_custody" name="chain_custody" class="mr-3 w-5 h-5">
+              <span>Chain of custody log</span>
+            </label>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Checklist Actions -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <button class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 flex items-center">
+          <span class="material-icons mr-2">save</span>
+          Save Progress
+        </button>
+        <button class="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 flex items-center">
+          <span class="material-icons mr-2">download</span>
+          Export PDF
+        </button>
+      </div>
+    </div>
+  
+    <!-- Legal Compliance Guide -->
+    <div class="bg-red-50 p-6 rounded-2xl">
+      <div class="flex items-center mb-6">
+        <span class="material-icons text-3xl text-red-600 mr-3">gavel</span>
+        <h2 class="text-2xl font-semibold">Indian Cyber Law Compliance</h2>
+      </div>
+  
+      <!-- Law Navigation -->
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <button class="p-2 text-center bg-white rounded-lg font-medium">IT Act</button>
+        <button class="p-2 text-center bg-white rounded-lg font-medium">Evidence Act</button>
+      </div>
+  
+      <!-- Legal Provisions -->
+      <div class="space-y-6">
+        <div class="bg-white p-4 rounded-lg">
+          <div class="flex items-center mb-2">
+            <span class="material-icons text-red-600 mr-2">warning</span>
+            <h3 class="font-medium">Section 65B Evidence Act</h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Admissibility of electronic records - Requires:
+          </p>
+          <ul class="list-disc pl-5 mt-2 text-sm">
+            <li>Certificate from device owner</li>
+            <li>Continuous operation proof</li>
+            <li>Hash verification</li>
+          </ul>
+        </div>
+  
+        <div class="bg-white p-4 rounded-lg">
+          <div class="flex items-center mb-2">
+            <span class="material-icons text-red-600 mr-2">dangerous</span>
+            <h3 class="font-medium">IT Act Section 66E</h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Privacy Violation - Punishment:
+            <span class="bg-red-100 text-red-600 px-2 py-1 rounded-full ml-2">3 Years + ₹2L Fine</span>
+          </p>
+        </div>
+  
+        <!-- Compliance Roadmap -->
+        <div class="bg-white p-4 rounded-lg">
+          <h3 class="font-medium mb-3">Compliance Roadmap</h3>
+          <div class="space-y-2">
+            <div class="flex items-center text-sm">
+              <span class="material-icons text-green-600 mr-2">check_circle</span>
+              Immediate Evidence Preservation
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="material-icons text-yellow-600 mr-2">schedule</span>
+              File FIR within 24hr
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="material-icons text-blue-600 mr-2">assignment</span>
+              Submit to Cyber Cell within 72hr
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Legal Authority Reference -->
+  <div class="bg-indigo-900 text-white p-8 rounded-2xl mb-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex items-center justify-center mb-4">
+        <span class="material-icons mr-3">verified_user</span>
+        <h3 class="text-xl font-semibold">Government Recognized Procedures</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-white/10 p-4 rounded-lg">
+          <div class="font-medium mb-2">CERT-In Guidelines</div>
+          <p class="text-xs opacity-80">Forensic Data Preservation Standards</p>
+        </div>
+        <div class="bg-white/10 p-4 rounded-lg">
+          <div class="font-medium mb-2">NCRB Protocols</div>
+          <p class="text-xs opacity-80">Digital Evidence Submission</p>
+        </div>
+        <div class="bg-white/10 p-4 rounded-lg">
+          <div class="font-medium mb-2">MeitY Standards</div>
+          <p class="text-xs opacity-80">Encryption & Hash Requirements</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  // Checklist functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    checkboxes.forEach(checkbox => {
+      // Load saved state
+      const savedState = localStorage.getItem(checkbox.nextElementSibling.textContent);
+      if(savedState) checkbox.checked = JSON.parse(savedState);
+  
+      // Save state on change
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(
+          checkbox.nextElementSibling.textContent, 
+          checkbox.checked
+        );
+        updateProgress();
+      });
+    });
+  
+    function updateProgress() {
+      const total = checkboxes.length;
+      const checked = [...checkboxes].filter(cb => cb.checked).length;
+      document.querySelector('.w-3/8').style.width = `${(checked/total)*100}%`;
+    }
+  });
+  </script>
+  
+  <style>
+  [type="checkbox"] {
+    accent-color: #4f46e5;
+  }
+  
+  .border-l-4 {
+    border-left-width: 4px;
+  }
+  </style>
+
+  </main>
+
+  <!-- India Focused Footer -->
+<footer class="bg-indigo-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-5 gap-8 text-sm mb-12">
+        <!-- About & Contact -->
+        <div class="md:col-span-2">
+          <div class="flex items-center mb-4">
+            <span class="material-icons text-2xl mr-2">security</span>
+            <span class="text-xl font-bold">CyberSafe Bharat</span>
+          </div>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+            Empowering Digital India against cyber threats through awareness and legal support.
+          </p>
+          <div class="space-y-1 text-gray-300">
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2">call</span>
+              Toll-Free: 1800-123-4567
+            </div>
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2">translate</span>
+              Available in 10 Indian Languages
+            </div>
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2">verified</span>
+              MeitY Certified Platform
+            </div>
+          </div>
+        </div>
+  
+        <!-- Emergency Contacts -->
+        <div>
+          <h4 class="font-semibold mb-4 text-indigo-200">Emergency Help</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <span class="material-icons text-red-400 text-sm mr-2">emergency</span>
+              <a href="tel:112" class="hover:text-indigo-200">National Emergency (112)</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">woman</span>
+              <a href="tel:1091" class="hover:text-indigo-200">Women's Helpline (1091)</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">report</span>
+              <a href="https://cybercrime.gov.in" target="_blank" class="hover:text-indigo-200">Cyber Crime Portal</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Indian Support Networks -->
+        <div>
+          <h4 class="font-semibold mb-4 text-indigo-200">Indian Initiatives</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">public</span>
+              <a href="#" class="hover:text-indigo-200">CERT-In</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">groups</span>
+              <a href="#" class="hover:text-indigo-200">National Commission for Women</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">school</span>
+              <a href="#" class="hover:text-indigo-200">Digital India Initiative</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Indian Resources -->
+        <div>
+          <h4 class="font-semibold mb-4 text-indigo-200">Legal Resources</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">download</span>
+              <a href="#" class="hover:text-indigo-200">IT Act 2000 (PDF)</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">phone_android</span>
+              <a href="#" class="hover:text-indigo-200">Cyber Dost App</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">balance</span>
+              <a href="#" class="hover:text-indigo-200">IPC Section 354D</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Newsletter & Social -->
+      <div class="border-t border-white/20 pt-8">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <h5 class="text-lg font-semibold">Stay Updated</h5>
+            <div class="flex gap-4 max-w-xl">
+              <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Enter email for security alerts" 
+                     class="flex-1 p-3 rounded-lg bg-white/10 border-none text-white placeholder-gray-300">
+              <button type="submit" class="bg-white text-indigo-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-all">
+                Subscribe
+              </button>
+            </div>
+            <p class="text-xs text-gray-400">भारत सरकार द्वारा अनुमोदित</p>
+          </div>
+  
+          <div class="space-y-4">
+            <h5 class="text-lg font-semibold">Connect With Us</h5>
+            <div class="flex gap-3">
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="Twitter">
+                <span class="material-icons text-xl">X</span>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="Facebook">
+                <span class="material-icons text-xl">facebook</span>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="Instagram">
+                <span class="material-icons text-xl">instagram</span>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="YouTube">
+                <span class="material-icons text-xl">play_circle</span>
+              </a>
+            </div>
+            <div class="flex items-center text-gray-400 mt-2">
+              <span class="material-icons text-base mr-2">groups</span>
+              50,000+ Digital Volunteers Network
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bottom Copyright -->
+      <div class="border-t border-white/20 mt-8 pt-6 text-center">
+        <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+          <div class="mb-2 md:mb-0">
+            © 2024 CyberSafe Bharat. Supported by MeitY
+          </div>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-indigo-200">Privacy Dashboard</a>
+            <a href="#" class="hover:text-indigo-200">Cyber Surakshit</a>
+            <a href="#" class="hover:text-indigo-200">MyGov.in</a>
+          </div>
+        </div>
+        <div class="mt-4 text-xs text-gray-500">
+          Compliant with IT Act 2000 | ISO 27001 Certified | GIGW Guidelines
+        </div>
+      </div>
+    </div>
+  
+    <!-- Back to Top -->
+    <button class="fixed bottom-6 left-6 bg-white/10 p-3 rounded-full shadow-lg hover:bg-white/20 transition-all">
+      <span class="material-icons text-white">arrow_upward</span>
+    </button>
+  </footer>
+
+  <!-- Footer (Same as previous) -->
+
+  <!-- Scripts -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Save checklist progress
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(checkbox.nextElementSibling.textContent, checkbox.checked);
+      });
+      
+      // Load saved state
+      const savedState = localStorage.getItem(checkbox.nextElementSibling.textContent);
+      if(savedState) checkbox.checked = JSON.parse(savedState);
+    });
+
+    // Accordion functionality
+    document.querySelectorAll('.step-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle('hidden');
+        header.querySelector('span').textContent = 
+          content.classList.contains('hidden') ? 'expand_more' : 'expand_less';
+      });
+    });
+  });
+  </script>
+
+</body>
+</html>

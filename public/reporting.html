@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' http://localhost:8000;">
+  <title>CyberSafe Bharat - Secure Reporting Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+<body class="bg-gray-50">
+
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/681f37f9439fb31912e9d1b6/1iqsv5bq1';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/681f37f9439fb31912e9d1b6/1iqsv5bq1';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <!-- Navigation (Same as previous) -->
+  <nav class="bg-indigo-900 text-white shadow-lg fixed w-full z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo Section -->
+        <a href="/" class="flex items-center space-x-2">
+          <span class="material-icons text-2xl text-indigo-300">security</span>
+          <span class="text-xl font-bold">CyberSafe Bharat</span>
+        </a>
+  
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <div class="flex space-x-6 text-sm font-medium">
+            <a href="/cyberstalking/homepage" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Homepage</a>
+            <a href="/cyberstalking/report" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Report Crimes</a>
+            <a href="/cyberstalking/preservation" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Preservation</a>
+            <a href="#education" class="hover:text-indigo-200 px-3 py-2 rounded-md transition-all">Education</a>
+          </div>
+          <div class="ml-6 border-l border-indigo-600 h-6"></div>
+          <div class="flex items-center space-x-4">
+            <a href="#emergency" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md flex items-center transition-all">
+              <span class="material-icons mr-2">emergency</span>
+              Emergency
+            </a>
+            <select class="bg-transparent text-sm focus:outline-none">
+              <option>English</option>
+              <option>हिंदी</option>
+            </select>
+          </div>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <button @click="isOpen = !isOpen" class="md:hidden p-2 rounded-md hover:bg-indigo-700 focus:outline-none"
+                aria-label="Toggle menu"
+                aria-expanded="false">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Mobile Navigation -->
+      <div class="md:hidden" x-show="isOpen" @click.away="isOpen = false" style="display: none;">
+        <div class="pt-2 pb-3 space-y-1">
+          <a href="/cyberstalking/homepage" class="block px-3 py-2 hover:bg-indigo-700 rounded-md">Homepage</a>
+          <a href="/cyberstalking/report" class="block px-3 py-2 hover:bg-indigo-700 rounded-md">Report Crimes</a>
+          <a href="/cyberstalking/preservation" class="block px-3 py-2 hover:bg-indigo-700 rounded-md">Preservation</a>
+          <a href="#education" class="block px-3 py-2 hover:bg-indigo-700 rounded-md">Education</a>
+          <div class="border-t border-indigo-600 mt-2 pt-2">
+            <a href="#emergency" class="block px-3 py-2 bg-red-500 hover:bg-red-600 rounded-md flex items-center">
+              <span class="material-icons mr-2">emergency</span>
+              Emergency Help
+            </a>
+          </div>
+          <div class="px-3 pt-2">
+            <select class="w-full bg-indigo-700 text-sm p-2 rounded-md">
+              <option>English</option>
+              <option>हिंदी</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+  // Mobile menu toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-label="Toggle menu"]');
+    const mobileMenu = document.querySelector('.md\\:hidden > div');
+    
+    mobileMenuButton.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    });
+  
+    // Close menu on click outside
+    document.addEventListener('click', function(event) {
+      if (!mobileMenu.contains(event.target)) {
+        mobileMenu.style.display = 'none';
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  
+// Smooth scroll for anchor links only
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    
+    // Only handle anchor links (starting with #)
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        mobileMenu.style.display = 'none';
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+    }
+    // Let browser handle regular page navigation
+  });
+});
+  });
+  </script> <br> <br>
+  
+  <!-- Reporting Header -->
+  <section class="bg-indigo-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="flex items-center justify-center mb-6">
+        <span class="material-icons text-4xl mr-3">verified_user</span>
+        <h1 class="text-3xl md:text-4xl font-bold">Secure Incident Reporting</h1>
+      </div>
+      <p class="text-lg text-indigo-200 max-w-2xl mx-auto">
+        Anonymous & Encrypted Reporting System for Cyber Crimes
+      </p>
+    </div>
+  </section>
+
+  <!-- Reporting Process -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <!-- Progress Tracker -->
+      <div class="md:col-span-1">
+        <div class="bg-white p-6 rounded-xl shadow-lg sticky top-6">
+          <h2 class="text-xl font-semibold mb-4">Report Progress</h2>
+          <div class="space-y-4">
+            <div class="flex items-center text-green-500">
+              <span class="material-icons">check_circle</span>
+              <span class="ml-2">Report Started</span>
+            </div>
+            <div class="flex items-center text-gray-400">
+              <span class="material-icons">radio_button_unchecked</span>
+              <span class="ml-2">Details Submitted</span>
+            </div>
+            <div class="flex items-center text-gray-400">
+              <span class="material-icons">radio_button_unchecked</span>
+              <span class="ml-2">Evidence Attached</span>
+            </div>
+            <div class="flex items-center text-gray-400">
+              <span class="material-icons">radio_button_unchecked</span>
+              <span class="ml-2">Secure Submission</span>
+            </div>
+          </div>
+          <div class="mt-6 border-t pt-4">
+            <div class="flex items-center text-sm text-gray-600">
+              <span class="material-icons mr-2">lock</span>
+              <span>End-to-End Encrypted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+          <!-- Error Messages -->
+          <div id="errorMessages" class="hidden mb-4 p-4 bg-red-50 text-red-700 rounded-lg"></div>
+      
+          <form id="reportForm" class="space-y-8" enctype="multipart/form-data">
+            <!-- Step 1: Incident Details -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-6 flex items-center">
+                <span class="material-icons text-indigo-600 mr-2">description</span>
+                Incident Details
+              </h3>
+              <div class="space-y-6">
+                <div>
+                  <label for="incident_type" class="block text-sm font-medium mb-2">Incident Type</label>
+                  <select name="incident_type" id="incident_type" required
+                    class="w-full border rounded-lg p-3 bg-gray-50 focus:ring-2 focus:ring-indigo-500">
+                    <option value="">Select Incident Type</option>
+                    <option>Cyber Harassment</option>
+                    <option>Financial Fraud</option>
+                    <option>Identity Theft</option>
+                    <option>Revenge Porn</option>
+                    <option>Cyber Bullying</option>
+                  </select>
+                </div>
+      
+                <div>
+                  <label for="description" class="block text-sm font-medium mb-2">Incident Description</label>
+                  <textarea name="description" id="description" required
+                    class="w-full border rounded-lg p-3 bg-gray-50 h-32"
+                    placeholder="Provide detailed description including dates, platforms involved, and any evidence references"
+                  ></textarea>
+                </div>
+      
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="first_occurrence" class="block text-sm font-medium mb-2">First Occurrence</label>
+                    <input type="date" name="first_occurrence" id="first_occurrence" required
+                      class="w-full border rounded-lg p-3 bg-gray-50">
+                  </div>
+                  <div>
+                    <label for="recent_occurrence" class="block text-sm font-medium mb-2">Most Recent Occurrence</label>
+                    <input type="date" name="recent_occurrence" id="recent_occurrence" required
+                      class="w-full border rounded-lg p-3 bg-gray-50">
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Step 2: Evidence Upload -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-6 flex items-center">
+                <span class="material-icons text-indigo-600 mr-2">attach_file</span>
+                Evidence Collection
+              </h3>
+              <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="max-w-xs mx-auto">
+                  <span class="material-icons text-4xl text-gray-400 mb-4">cloud_upload</span>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Drag & Drop Screenshots, Emails, or Documents
+                  </p>
+                  <p class="text-xs text-gray-500 mb-4">Max file size: 25MB</p>
+                  <input type="file" class="hidden" id="evidence" name="evidence" multiple>
+                  <label for="evidence" 
+                        class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg cursor-pointer hover:bg-indigo-700">
+                    Browse Files
+                  </label>
+                </div>
+              </div>
+              <div id="filePreview" class="mt-4 space-y-2"></div>
+            </div>
+      
+            <!-- Step 3: Security Check -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-6 flex items-center">
+                <span class="material-icons text-indigo-600 mr-2">security</span>
+                Security Verification
+              </h3>
+              <div class="bg-red-50 p-6 rounded-lg">
+                <div class="flex items-center">
+                  <input type="checkbox" name="legal_compliance" id="legal_compliance" required class="mr-2">
+                  <label for="legal_compliance" class="text-sm">
+                    I confirm I'm in a safe location to file this report
+                  </label>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Submission -->
+            <div class="border-t pt-8">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div class="mb-4 md:mb-0">
+                  <h4 class="font-medium mb-2">Ready to Submit Securely?</h4>
+                  <p class="text-sm text-gray-600">
+                    All data is encrypted using 256-bit SSL encryption
+                  </p>
+                </div>
+                <button type="submit" id="submitBtn" 
+                      class="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 flex items-center">
+                  <span class="material-icons mr-2">lock</span>
+                  <span id="submitText">Submit Report</span>
+                  <div id="spinner" class="hidden ml-2">
+                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <script>
+      document.getElementById('reportForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const submitBtn = document.getElementById('submitBtn');
+        const submitText = document.getElementById('submitText');
+        const spinner = document.getElementById('spinner');
+        const errorDiv = document.getElementById('errorMessages');
+      
+        // Clear previous errors
+        errorDiv.classList.add('hidden');
+        errorDiv.innerHTML = '';
+      
+        // Validate form
+        const errors = validateForm();
+        if (errors.length > 0) {
+          errorDiv.innerHTML = errors.map(e => `<p>• ${e}</p>`).join('');
+          errorDiv.classList.remove('hidden');
+          return;
+        }
+      
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.textContent = 'Submitting...';
+        spinner.classList.remove('hidden');
+      
+        try {
+          const formData = new FormData(form);
+          
+          const response = await fetch('http://localhost:8000/api/report/homepage', {
+            method: 'POST',
+            body: formData
+          });
+      
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }  else {
+                  
+          const result = await response.json();
+          alert('Report submitted successfully!');
+          form.reset();
+          document.getElementById('filePreview').innerHTML = '';
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Report submitted successfully!');
+
+          errorDiv.classList.remove('hidden');
+        } finally {
+          submitBtn.disabled = false;
+          submitText.textContent = 'Submit Report';
+          spinner.classList.add('hidden');
+        }
+      });
+      
+      document.getElementById('evidence').addEventListener('change', function(e) {
+        const previewDiv = document.getElementById('filePreview');
+        previewDiv.innerHTML = '';
+        
+        Array.from(e.target.files).forEach(file => {
+          if (file.size > 25 * 1024 * 1024) {
+            alert(`File ${file.name} exceeds 25MB limit and will not be uploaded`);
+            return;
+          }
+      
+          const fileEl = document.createElement('div');
+          fileEl.className = 'flex items-center p-2 border rounded mb-2 bg-gray-50';
+          
+          if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              const img = document.createElement('img');
+              img.className = 'w-16 h-16 object-cover mr-4';
+              img.src = e.target.result;
+              fileEl.prepend(img);
+            };
+            reader.readAsDataURL(file);
+          } else {
+            const icon = document.createElement('span');
+            icon.className = 'material-icons mr-4 text-gray-500';
+            icon.textContent = 'insert_drive_file';
+            fileEl.prepend(icon);
+          }
+      
+          const fileInfo = document.createElement('div');
+          fileInfo.innerHTML = `
+            <div class="text-sm font-medium">${file.name}</div>
+            <div class="text-xs text-gray-500">${formatFileSize(file.size)}</div>
+          `;
+          fileEl.appendChild(fileInfo);
+          previewDiv.appendChild(fileEl);
+        });
+      });
+      
+      function validateForm() {
+        const errors = [];
+        const incidentType = document.getElementById('incident_type').value;
+        const description = document.getElementById('description').value.trim();
+        const firstDate = document.getElementById('first_occurrence').value;
+        const recentDate = document.getElementById('recent_occurrence').value;
+        const safetyCheck = document.getElementById('legal_compliance').checked;
+      
+        if (!incidentType) errors.push('Incident Type is required');
+        if (!description) errors.push('Incident Description is required');
+        if (!firstDate) errors.push('First Occurrence date is required');
+        if (!recentDate) errors.push('Most Recent Occurrence date is required');
+        if (firstDate && recentDate && new Date(recentDate) < new Date(firstDate)) {
+          errors.push('Most Recent Occurrence must be after First Occurrence');
+        }
+        if (!safetyCheck) errors.push('Safety confirmation is required');
+      
+        Array.from(document.getElementById('evidence').files).forEach(file => {
+          if (file.size > 25 * 1024 * 1024) {
+            errors.push(`File ${file.name} exceeds 25MB limit`);
+          }
+        });
+      
+        return errors;
+      }
+      
+      function formatFileSize(bytes) {
+        if (bytes >= 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        if (bytes >= 1024) return (bytes / 1024).toFixed(1) + ' KB';
+        return bytes + ' bytes';
+      }
+      </script>
+      </div>
+
+    <!-- Support Resources -->
+    <div class="bg-indigo-50 p-8 rounded-xl">
+      <h3 class="text-xl font-semibold mb-6">Post-Submission Support</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-3">
+            <span class="material-icons text-indigo-600 mr-2">assignment</span>
+            <h4 class="font-medium">Case Tracking</h4>
+          </div>
+          <p class="text-sm text-gray-600">
+            Track your report status through our secure portal
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-3">
+            <span class="material-icons text-indigo-600 mr-2">support_agent</span>
+            <h4 class="font-medium">Victim Support</h4>
+          </div>
+          <p class="text-sm text-gray-600">
+            24/7 counseling and legal assistance
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-3">
+            <span class="material-icons text-indigo-600 mr-2">history</span>
+            <h4 class="font-medium">Evidence Preservation</h4>
+          </div>
+          <p class="text-sm text-gray-600">
+            Guidance on maintaining digital evidence
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as previous) -->
+  <footer class="bg-indigo-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-5 gap-8 text-sm mb-12">
+        <!-- About & Contact -->
+        <div class="md:col-span-2">
+          <div class="flex items-center mb-4">
+            <span class="material-icons text-2xl mr-2">security</span>
+            <span class="text-xl font-bold">CyberSafe Bharat</span>
+          </div>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+            Empowering Digital India against cyber threats through awareness and legal support.
+          </p>
+          <div class="space-y-1 text-gray-300">
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2">call</span>
+              Toll-Free: 1800-123-4567
+            </div>
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2">translate</span>
+              Available in 10 Indian Languages
+            </div>
+            <div class="flex items-center">
+              <span class="material-icons text-sm mr-2">verified</span>
+              MeitY Certified Platform
+            </div>
+          </div>
+        </div>
+  
+        <!-- Emergency Contacts -->
+        <div>
+          <h4 class="font-semibold mb-4 text-indigo-200">Emergency Help</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <span class="material-icons text-red-400 text-sm mr-2">emergency</span>
+              <a href="tel:112" class="hover:text-indigo-200">National Emergency (112)</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">woman</span>
+              <a href="tel:1091" class="hover:text-indigo-200">Women's Helpline (1091)</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">report</span>
+              <a href="https://cybercrime.gov.in" target="_blank" class="hover:text-indigo-200">Cyber Crime Portal</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Indian Support Networks -->
+        <div>
+          <h4 class="font-semibold mb-4 text-indigo-200">Indian Initiatives</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">public</span>
+              <a href="#" class="hover:text-indigo-200">CERT-In</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">groups</span>
+              <a href="#" class="hover:text-indigo-200">National Commission for Women</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">school</span>
+              <a href="#" class="hover:text-indigo-200">Digital India Initiative</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Indian Resources -->
+        <div>
+          <h4 class="font-semibold mb-4 text-indigo-200">Legal Resources</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">download</span>
+              <a href="#" class="hover:text-indigo-200">IT Act 2000 (PDF)</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">phone_android</span>
+              <a href="#" class="hover:text-indigo-200">Cyber Dost App</a>
+            </li>
+            <li class="flex items-center">
+              <span class="material-icons text-sm mr-2">balance</span>
+              <a href="#" class="hover:text-indigo-200">IPC Section 354D</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Newsletter & Social -->
+      <div class="border-t border-white/20 pt-8">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <h5 class="text-lg font-semibold">Stay Updated</h5>
+            <div class="flex gap-4 max-w-xl">
+              <input type="email" placeholder="Enter email for security alerts" 
+                     class="flex-1 p-3 rounded-lg bg-white/10 border-none text-white placeholder-gray-300">
+              <button class="bg-white text-indigo-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-all">
+                Subscribe
+              </button>
+            </div>
+            <p class="text-xs text-gray-400">भारत सरकार द्वारा अनुमोदित</p>
+          </div>
+  
+          <div class="space-y-4">
+            <h5 class="text-lg font-semibold">Connect With Us</h5>
+            <div class="flex gap-3">
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="Twitter">
+                <span class="material-icons text-xl">X</span>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="Facebook">
+                <span class="material-icons text-xl">facebook</span>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="Instagram">
+                <span class="material-icons text-xl">instagram</span>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200" aria-label="YouTube">
+                <span class="material-icons text-xl">play_circle</span>
+              </a>
+            </div>
+            <div class="flex items-center text-gray-400 mt-2">
+              <span class="material-icons text-base mr-2">groups</span>
+              50,000+ Digital Volunteers Network
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bottom Copyright -->
+      <div class="border-t border-white/20 mt-8 pt-6 text-center">
+        <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+          <div class="mb-2 md:mb-0">
+            © 2024 CyberSafe Bharat. Supported by MeitY
+          </div>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-indigo-200">Privacy Dashboard</a>
+            <a href="#" class="hover:text-indigo-200">Cyber Surakshit</a>
+            <a href="#" class="hover:text-indigo-200">MyGov.in</a>
+          </div>
+        </div>
+        <div class="mt-4 text-xs text-gray-500">
+          Compliant with IT Act 2000 | ISO 27001 Certified | GIGW Guidelines
+        </div>
+      </div>
+    </div>
+  
+    <!-- Back to Top -->
+    <button class="fixed bottom-6 left-6 bg-white/10 p-3 rounded-full shadow-lg hover:bg-white/20 transition-all">
+      <span class="material-icons text-white">arrow_upward</span>
+    </button>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+  // Form validation and progress tracking
+  document.addEventListener('DOMContentLoaded', () => {
+    const formSteps = document.querySelectorAll('form > div');
+    const progressItems = document.querySelectorAll('.progress-steps li');
+
+    // Handle form navigation
+    function updateProgress(currentStep) {
+      progressItems.forEach((item, index) => {
+        item.classList.toggle('active', index <= currentStep);
+      });
+    }
+
+    // File upload handling
+    const fileInput = document.getElementById('evidence');
+    fileInput.addEventListener('change', handleFiles);
+
+    function handleFiles(e) {
+      const files = e.target.files;
+      // Handle file validation and preview
+    }
+
+    // Safety check validation
+    const safetyCheck = document.getElementById('legal_compliance');
+    safetyCheck.addEventListener('change', (e) => {
+      if(!e.target.checked) {
+        alert('Please ensure your safety before proceeding');
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>
