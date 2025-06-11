@@ -5,16 +5,26 @@ import json
 import os
 from datetime import datetime
 import uuid
+import boto3
+from botocore.exceptions import ClientError
 
 from database import get_db
 from models import CyberReport
 
 router = APIRouter()
 
-UPLOAD_DIR = "uploads"
+# AWS S3 Configuration
+S3_BUCKET = os.getenv('AWS_S3_BUCKET')
+AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY')
+AWS_SECRET_KEY = os.getenv('AWS_SECRET_KEY')
+AWS_REGION = os.getenv('AWS_REGION', 'us-east-1')
 
-# Ensure upload directory exists
-os.makedirs(UPLOAD_DIR, exist_ok=True)
+s3_client = boto3.client(
+    's3',
+    aws_access_key_id=AWS_ACCESS_KEY,
+    aws_secret_access_key=AWS_SECRET_KEY,
+    region_name=AWS_REGION
+)
 
 @router.post("/report/homepage")
 async def create_report(
@@ -29,14 +39,25 @@ async def create_report(
         # Generate unique reference ID
         reference_id = f"CSB-{uuid.uuid4().hex[:8].upper()}"
         
-        # Handle file uploads
+        # Handle file uploads to S3
         evidence_files = []
         if evidence:
             for file in evidence:
-                file_path = os.path.join(UPLOAD_DIR, f"{reference_id}_{file.filename}")
-                with open(file_path, "wb") as f:
-                    f.write(await file.read())
-                evidence_files.append(file_path)
+                file_key = f"evidence/{reference_id}/{file.filename}"
+                try:
+                    # Upload file to S3
+                    s3_client.upload_fileobj(
+                        file.file,
+                        S3_BUCKET,
+                        file_key,
+                        ExtraArgs={'ACL': 'public-read'}
+                    )
+                    
+                    # Generate the URL for the uploaded file
+                    file_url = f"https://{S3_BUCKET}.s3.{AWS_REGION}.amazonaws.com/{file_key}"
+                    evidence_files.append(file_url)
+                except ClientError as e:
+                    raise HTTPException(status_code=500, detail=f"Failed to upload file to S3: {str(e)}")
         
         # Create report in database
         report = CyberReport(

@@ -33,3 +33,15 @@ class EvidenceFile(Base):
     
     # Relationship with report
     report = relationship("Report", back_populates="evidence_files")
+
+class CyberReport(Base):
+    __tablename__ = "cyber_reports"
+
+    id = Column(Integer, primary_key=True, index=True)
+    reference_id = Column(String, unique=True, index=True)
+    incident_type = Column(String)
+    first_occurrence = Column(DateTime)
+    recent_occurrence = Column(DateTime)
+    description = Column(Text)
+    evidence_files = Column(Text)  # JSON string of file paths
+    created_at = Column(DateTime, server_default='CURRENT_TIMESTAMP')
