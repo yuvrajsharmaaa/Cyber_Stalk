@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime, Text
 from datetime import datetime
-from config.database import Base
+from database import Base
 
 class CyberReport(Base):
     __tablename__ = "cyber_reports"

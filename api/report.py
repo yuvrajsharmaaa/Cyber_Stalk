@@ -6,8 +6,8 @@ import os
 from datetime import datetime
 import uuid
 
-from config.database import get_db
-from models.report import CyberReport
+from database import get_db
+from models import CyberReport
 
 router = APIRouter()
 
