@@ -87,4 +87,8 @@ def get_report(reference_id: str, db: Session = Depends(get_db)):
     report = db.query(CyberReport).filter(CyberReport.reference_id == reference_id).first()
     if not report:
         raise HTTPException(status_code=404, detail="Report not found")
-    return report 
+    return report
+
+@router.get("/report/homepage")
+def get_homepage():
+    return {"message": "Homepage data available."} 
