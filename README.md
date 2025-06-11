@@ -14,7 +14,7 @@ A platform for reporting and tracking cyberstalking incidents, with educational 
 ### 1. **Clone the repository**
 ```bash
 git clone https://github.com/yuvrajsharmaaa/Cyber_Stalk.git
-cd cyberstalking-awareness-portal
+cd Cyber_Stalk
 ```
 
 ### 2. **Set up Python environment**
@@ -41,12 +41,9 @@ source venv/bin/activate
   pip install -r requirements.txt
   ```
 
-### 4. **Set up PostgreSQL**
-- Install PostgreSQL and create a database (e.g., `cyberstalk`).
-- Set your database URL in a `.env` file in the project root:
-  ```
-  DATABASE_URL=postgresql://postgres:<yourpassword>@localhost:5432/cyberstalk
-  ```
+### 4. **Set up the Database**
+- By default, the project uses SQLite (`cyberstalk.db` will be created automatically).
+- To use PostgreSQL, update the connection string in `database.py` or set a `DATABASE_URL` in a `.env` file.
 
 ### 5. **Initialize the database**
 - If using SQLAlchemy's `Base.metadata.create_all`:
@@ -60,8 +57,10 @@ source venv/bin/activate
 ```bash
 uvicorn main:app --reload
 ```
-- Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) for the API docs.
+- Visit [http://127.0.0.1:8000/public/index.html](http://127.0.0.1:8000/public/index.html) for the homepage.
 - Visit [http://127.0.0.1:8000/public/reporting.html](http://127.0.0.1:8000/public/reporting.html) for the reporting UI.
+- Visit [http://127.0.0.1:8000/public/preservation.html](http://127.0.0.1:8000/public/preservation.html) for the preservation page.
+- Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) for the API docs.
 
 ---
 
@@ -69,7 +68,7 @@ uvicorn main:app --reload
 
 - **Frontend:** HTML, Tailwind CSS, Vanilla JS, Material Icons
 - **Backend:** FastAPI, SQLAlchemy ORM, Uvicorn, aiofiles
-- **Database:** PostgreSQL
+- **Database:** SQLite (default), PostgreSQL (optional)
 
 ---
 
@@ -114,7 +113,7 @@ MIT License
 
 ## 📚 Table of Contents
 - [✨ Features](#-features)
-- [🛠 Technologies](#-technologies)
+- [🛠 Tech Stack](#-tech-stack)
 - [📥 Installation](#-installation)
 - [🚀 Usage](#-usage)
 - [🤝 Contributing](#-contributing)
@@ -177,8 +176,7 @@ MIT License
 
 > ℹ️ *Screenshots are located in the `assets/screenshots/` directory. Make sure the images exist and are named correctly (e.g., `homepage.jpg`, `reporting-center.jpg`, `resources.jpg`).*
 
-
-## 🛠 Technologies
+## 🛠 Tech Stack
 
 ### Frontend
 - **Tailwind CSS** + **Meraki UI**
