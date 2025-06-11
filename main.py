@@ -25,8 +25,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static files
-app.mount("/public", StaticFiles(directory="public"), name="public")
+# Mount static files at root to serve index.html
+app.mount("/", StaticFiles(directory="public", html=True), name="static")
 
 # Mount uploads directory
 app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
@@ -41,6 +41,4 @@ def get_db():
     finally:
         db.close()
 
-@app.get("/")
-async def root():
-    return {"message": "Welcome to Cyber Stalk API"} 
+# Removed the @app.get("/") endpoint to allow static index.html to be served 
